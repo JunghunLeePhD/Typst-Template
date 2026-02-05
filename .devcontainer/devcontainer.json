@@ -2,15 +2,14 @@
   "name": "Typst Project",
   "image": "ghcr.io/junghunleephd/typst-template-env:main",
   "remoteUser": "vscode",
+  
+  "postStartCommand": "mkdir -p ~/.vscode-server/extensions/myriad-dreamin.tinymist && cp -rn /usr/local/share/vscode-tinymist/* ~/.vscode-server/extensions/myriad-dreamin.tinymist/",
+
   "customizations": {
     "vscode": {
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh"
       },
-      "extensions": [
-        "nvarner.typst-lsp",
-        "myriad-dreamin.tinymist"
-      ],
       "[typst]": {
         "editor.defaultFormatter": "myriad-dreamin.tinymist",
         "editor.formatOnSave": true
