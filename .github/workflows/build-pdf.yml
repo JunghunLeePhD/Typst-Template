@@ -1,0 +1,32 @@
+name: Build Typst PDF
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  build_typst:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Installs the Typst CLI (very fast, <5 seconds)
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v0.3.0
+
+      # Compiles the document
+      # Typst doesn't strictly need a 'build' folder, but we create one
+      # to keep your artifact structure identical to your LaTeX workflow.
+      - name: Compile Typst Document
+        run: |
+          mkdir -p build
+          typst compile main.typ build/main.pdf
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-pdf
+          path: build/main.pdf
