@@ -1,8 +1,12 @@
 {
   "name": "Typst Project",
-  "image": "ghcr.io/junghunleephd/typst-template-env:latest",
+  "image": "ghcr.io/junghunleephd/typst-template-env:main",
+  "remoteUser": "vscode",
   "customizations": {
     "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      },
       "extensions": [
         "nvarner.typst-lsp",
         "myriad-dreamin.tinymist"
