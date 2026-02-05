@@ -2,7 +2,7 @@
 
 #set document(
   title: "My Typst Project",
-  author: "Your Name"
+  author: "Your Name",
 )
 #set page(
   paper: "a4",
@@ -11,14 +11,17 @@
 )
 #set text(
   font: "Linux Libertine",
-  lang: "en"
+  lang: "en",
 )
 #set heading(
-  numbering: "1.1"
+  numbering: "1.1",
 )
 
 #align(center)[
-  #text(size: 24pt, weight: "bold")[Project Title] \
+  #text(
+    size: 24pt,
+    weight: "bold",
+  )[Project Title] \
   #v(1em)
   Your Name \
   #datetime.today().display()

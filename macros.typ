@@ -13,6 +13,6 @@
     [
       *Definition: #title* \
       #body
-    ]
+    ],
   )
 }
