@@ -32,4 +32,5 @@
 
 #include "sections/introduction.typ"
 
+#pagebreak()
 #bibliography("references.bib")
