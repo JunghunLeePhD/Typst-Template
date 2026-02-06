@@ -1,4 +1,4 @@
-== Introduction
+= Introduction
 This is the introduction section.
 
 Here is some math using the macro defined in `macros.typ`:
